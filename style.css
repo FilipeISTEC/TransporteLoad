@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&family=Montserrat:wght@400;700&family=Overpass:wght@300;400;500;600&display=swap');
+*{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Overpass', sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s ease;
+
+}
+
+html{
+
+
+}
+html::-webkit-scrollbar{
+    width: 0.6rem;
+    background-color: #fff;
+   
+}
+html::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color:black;
+    border-radius: 25rem;
+
+}
+
+body{
+    background-color: #0c020b;
+    
+}
+#deslizar{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#deslizar .slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+ }
+#deslizar .slider .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+ }
+ 
+#deslizar .slider .slides input{
+    display: none;
+ }
+
+#deslizar .slider .slides .slide {
+    width: 20%;
+    transition: 2s;
+ }
+
+#deslizar .slider .slides .slide img{
+    width: 800px;
+    height: 500px;
+    margin-top: -2.5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+ }
+
+#deslizar .slider .slides .navigation-manual{
+position:absolute;
+width:800px;
+margin-top:420px;
+display: flex;
+justify-content: center;
+
+ }
+
+ #deslizar .slider .slides .navigation-manual .manual-btn{
+   
+    border: 2px solid #fccc2f;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    
+ }
+
+ #deslizar .slider .slides .navigation-manual .manual-btn:not(:last-child){
+    margin-right: 40px;
+ }
+ #deslizar .slider .slides .navigation-manual .manual-btn:hover{
+    background-color: rgb(20, 24, 27);
+ }
+
+ #radio1:checked ~ .first{
+    margin-left: 0;
+ }
+ #radio2:checked ~ .first{
+    margin-left: -20%;
+ }
+ #radio3:checked ~ .first{
+    margin-left: -40%;
+ }
+
+
+
+ #deslizar .slider .slides .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+ }
+ #deslizar .slider .slides .navigation-auto div{
+    border: 2px solid #fccc2f;
+    border-radius: 10px;
+    transition: 1s;
+ }
+ #deslizar .slider .slides .navigation-auto div:not(:last-chld){
+    margin-right: 40px;
+
+ }
+
+ #radio1:checked ~ .navigation-auto .auto-btn-1{
+    background-color: #fccc2f;
+    display: none;
+
+
+ }
+
+ #radio2:checked ~ .navigation-auto .auto-btn-2{
+    background-color: #fccc2f;
+    display: none;
+
+ }
+
+ #radio3:checked ~ .navigation-auto .auto-btn-3{
+    background-color: #fccc2f;
+    display: none;
+
+ }
+section{
+    padding: 1.8rem 5%;
+    
+}
+.btn{
+    margin-top: 0.7rem;
+    display: inline-block;
+    padding: 1.3rem 2.5rem;
+    border-radius: 22rem;
+    background-color: rgb(240, 178, 9);
+    color: #fcfcfc;
+    font-size: 1.5rem;
+   
+}
+
+.btn:hover{
+    opacity: 60%;
+}
+
+.btnn{
+    margin-top: 0.7rem;
+    display: inline-block;
+    padding: 1.3rem 2.5rem;
+    border-radius: 22rem;
+    background-color:rgb(240, 178, 9);
+    color: #fff;
+    font-size: 1.5rem;
+}
+.btnn:hover{
+    opacity: 80%;
+}
+
+.bt{
+    margin-top: 0.7rem;
+    display: inline-block;
+    padding: 1.3rem 2.5rem;
+    border-radius: 22rem;
+    background-color:black;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.bt:hover{
+    opacity: 60%;
+}
+#bar{
+    display: none;
+}
+.head{
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    font-size: 3.7rem;
+    border-bottom: 0.2rem solid white;
+}
+.head span{
+    text-transform: uppercase;
+    text-align: center;
+    
+    padding: 1rem;
+    margin-bottom: 3rem;
+    font-size: 3.7rem;
+}
+
+.header .logo img{
+    height: 5rem;
+    
+}
+
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: #fff;
+    width: 30rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 25px 2px rgb(0 0 0 / 75%);
+    transform: scaleY(0);
+}
+.header .search-form.active{
+    transform: scaleY(1);
+}
+.header .search-form i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    color: black;
+
+}
+.header .search-form input{
+width: 100%;
+}
+
+.header {
+    background-color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding:  0.5rem;
+    margin: 1.8rem 7%;
+    border-radius: 14rem;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+}
+
+
+.header .navbar a{
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: black;
+    border-bottom: 0.2rem solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover{
+    border-color:#e4ca35;
+    padding-bottom: 0.3rem;
+}
+.header .buttons button{
+    cursor: pointer;
+    font-size: 1.7rem;
+    
+    margin-right: 2rem;
+    background-color: transparent;
+    padding-right: 0.1rem;
+}
+
+.header .navbar { 
+    display: inline-flex;
+    list-style: none;
+}
+
+.altmenu{
+    display: none;
+    
+}
+.altmenu ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 8.4rem;
+    border-radius: 1rem;
+}
+.altmenu ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li:hover .altmenu{
+    display: block;
+    position: absolute;
+}
+
+/* aba serviços ----------------------------- */
+
+.altmenu1{
+    display: none;
+    
+}
+.altmenu1 ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 6.5rem;
+    border-radius: 1rem;
+}
+.altmenu1 ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li:hover .altmenu1{
+    display: block;
+    position: absolute;
+}
+/* ------------------------------ */
+
+.altmenu1 .aaltmenu1{
+    display: none;
+    
+}
+.altmenu1 .aaltmenu1 ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 13rem;
+    width: 15rem;
+    border-radius: 1rem;
+    
+}
+.altmenu1 .aaltmenu1 ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenu1 li:hover .aaltmenu1{
+    display: inline;
+    position:absolute;
+    top:5rem;
+    left: 11.3rem;
+}
+
+/* aba sobre nos*/
+.altmenu11{
+    display: none;
+    
+}
+.altmenu11 ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 4.5rem;
+    border-radius: 1rem;
+}
+.altmenu11 ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li:hover .altmenu11{
+    display: block;
+    position: absolute;
+}
+/* ------------------------------ */
+
+.altmenu11 .aaltmenu11{
+    display: none;
+    
+}
+.altmenu11 .aaltmenu11 ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 13rem;
+    width: 15rem;
+    border-radius: 1rem;
+    
+}
+.altmenu11 .aaltmenu11 ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenu11 li:hover .aaltmenu11{
+    display: inline;
+    position:absolute;
+    top:5rem;
+    left: 11.3rem;
+}
+/**/
+/* ------------------------------ */
+
+.altmenuu1{
+    display: none;
+    
+}
+.altmenuu1 ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 34rem;
+    border-radius: 1rem;
+}
+.altmenuu1 ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li:hover .altmenuu1{
+    display: block;
+    position: absolute;
+}
+/* ------------------------------ */
+
+.altmenuu1 .bir{
+    display: none;
+    
+}
+.altmenuu1 .bir ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 6rem;
+    width: 8rem;
+    border-radius: 1rem;
+    
+}
+.altmenuu1 .bir ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenuu1 li:hover .bir{
+    display: inline;
+    position:absolute;
+    top:0rem;
+    left: 15.1rem;
+}
+/* ------------------------------ */
+.altmenuu1 .iki{
+    display: none;
+    
+}
+.altmenuu1 .iki ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 6.5rem;
+    width: 8rem;
+    border-radius: 1rem;
+    
+}
+.altmenuu1 .iki ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenuu1 li:hover .iki{
+    display: inline;
+    position:absolute;
+    top:2rem;
+    left: 15.1rem;
+}
+/* ------------------------------ */
+.altmenuu1 .uc{
+    display: none;
+    
+}
+.altmenuu1 .uc ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 5rem;
+    width: 11rem;
+    border-radius: 1rem;
+    
+}
+.altmenuu1 .uc ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenuu1 li:hover .uc{
+    display: inline;
+    position:absolute;
+    top:3.2rem;
+    left: 15.1rem;
+}
+/* ------------------------------ */
+.altmenuu1 .dort{
+    display: none;
+    
+}
+.altmenuu1 .dort ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 6.3rem;
+    width: 12.2rem;
+    border-radius: 1rem;
+    
+}
+.altmenuu1 .dort ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenuu1 li:hover .dort{
+    display: inline;
+    position:absolute;
+    top:4.5rem;
+    left: 15.1rem;
+}
+/* ------------------------------ */
+.altmenuu1 .bes{
+    display: none;
+    
+}
+.altmenuu1 .bes ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 8.1rem;
+    width: 12.2rem;
+    border-radius: 1rem;
+    
+}
+.altmenuu1 .bes ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenuu1 li:hover .bes{
+    display: inline;
+    position:absolute;
+    top:6rem;
+    left: 15.1rem;
+}
+/* ------------------------------ */
+.altmenuu1 .alti{
+    display: none;
+    
+}
+.altmenuu1 .alti ul{
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #fff;
+    height: 6.3rem;
+    width: 11rem;
+    border-radius: 1rem;
+    
+}
+.altmenuu1 .alti ul li{
+   padding: 0.35rem;
+}
+
+.header .navbar li .altmenuu1 li:hover .alti{
+    display: inline;
+    position:absolute;
+    top:10rem;
+    left: 15.1rem;
+}
+/* ------------------------------ */
